@@ -18,14 +18,14 @@ document.addEventListener("DOMContentLoaded", () => {
   let winningStreak = 0;
 
   function triggerCelebration() {
-    // Play celebration sound
+
     celebrationSound.currentTime = 0;
     celebrationSound.play();
 
-    // Add container animation
+
     container.classList.add("celebrate");
 
-    // Trigger confetti
+
     const duration = 3000;
     const animationEnd = Date.now() + duration;
     const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
@@ -61,7 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
     currentChoice = choice;
     choiceSpan.textContent = choice;
 
-    // Update button styles
     headsButton.classList.toggle("selected", choice === "Heads");
     tailsButton.classList.toggle("selected", choice === "Tails");
   }
@@ -77,14 +76,13 @@ document.addEventListener("DOMContentLoaded", () => {
     totalFlips++;
     flipsSpan.textContent = totalFlips;
 
-    // Random result
+
     const result = Math.random() < 0.5 ? "Heads" : "Tails";
 
-    // Hide both images initially
+
     headsImg.classList.remove("active");
     tailsImg.classList.remove("active");
 
-    // Show the appropriate image based on result
     setTimeout(() => {
       resultSpan.textContent = result;
       if (result === "Heads") {
@@ -94,7 +92,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       isFlipping = false;
 
-      // Check if player won
       if (result === currentChoice) {
         winningStreak++;
         streakSpan.textContent = winningStreak;
@@ -109,14 +106,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 600);
   }
 
-  // Add click event listeners to choice buttons
   headsButton.addEventListener("click", () => selectChoice("Heads"));
   tailsButton.addEventListener("click", () => selectChoice("Tails"));
 
-  // Add click event listener to flip button
   flipButton.addEventListener("click", flipCoin);
 
-  // Add keyboard support
   document.addEventListener("keydown", (event) => {
     if (event.code === "Space") {
       event.preventDefault();

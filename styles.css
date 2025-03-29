@@ -60,7 +60,6 @@ body {
   display: block;
 }
 
-/* Remove the old coin styles */
 .heads,
 .tails,
 .flip,
@@ -68,7 +67,6 @@ body {
   display: none;
 }
 
-/* Remove the gradient backgrounds after flip */
 .flip .heads {
   background: #ffd700;
   border: 4px solid #b8860b;
