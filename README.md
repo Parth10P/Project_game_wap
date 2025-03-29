@@ -1,4 +1,4 @@
-#🎲 Coin Flip Game 🎲
+# 🎲 Coin Flip Game 🎲
 
 Welcome to the Coin Flip Game, a fun and interactive way to test your luck! Will you pick Heads or Tails? Flip the coin and find out! 🪙✨
 
