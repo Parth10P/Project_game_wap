@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coin Flip Game</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="coin">
+        <img src="images/head.png" alt="Heads" class="heads-img" />
+        <img src="images/tail.png" alt="Tails" class="tails-img" />
+      </div>
+      <div class="stats">
+        <p>Result: <span id="result">-</span></p>
+        <p>Total Flips: <span id="flips">0</span></p>
+        <p>Your Choice: <span id="choice">-</span></p>
+        <p>Winning Streak: <span id="streak">0</span></p>
+      </div>
+      <div class="button-group">
+        <button id="headsButton" class="choice-button">Choose Heads</button>
+        <button id="tailsButton" class="choice-button">Choose Tails</button>
+      </div>
+      <button id="flipButton">Flip Coin</button>
+    </div>
+    <audio
+      id="celebrationSound"
+      src="https://assets.mixkit.co/active_storage/sfx/2013/2013-preview.mp3"
+    ></audio>
+    <script src="script.js"></script>
+  </body>
+</html>
